@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   try {
     // Retrieve the selected text from storage
     const data = await browser.storage.local.get("selectedText");
-    const selectedText = data.selectedText || "No text selected.";
+    const selectedText = (data.selectedText || "No text selected.").toLowerCase(); // Convert to lowercase for case-insensitive matching
     console.log("Popup Text:", selectedText); // Debug
 
     // Fetch the words.txt file
@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     const text = await response.text();
     const wordMap = text.split("\n").reduce((map, line) => {
       const [key, value] = line.split(":").map((s) => s.trim());
-      if (key && value) map[key] = value;
+      if (key && value) map[key.toLowerCase()] = value; // Store keys as lowercase
       return map;
     }, {});
 
