@@ -1,7 +1,5 @@
-anki: memory
-malice: dushta
-example: a representative instance
-newword: new definition
-sacrosant : pavitra
-Temporary: adadak
-Mozilla: skajdkajd
+easy: sopa
+hard: kathin
+complex: katil
+simple: saral
+

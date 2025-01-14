@@ -1,11 +1,14 @@
 body {
   font-family: Arial, sans-serif;
   padding: 10px;
-  background-color: #f9f9f9;
+  margin: 0;
+  background-color: #f4f4f4;
   color: #333;
 }
 
 #content {
   font-size: 16px;
+  font-weight: bold;
+  text-align: center;
 }
 
