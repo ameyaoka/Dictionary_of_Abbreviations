@@ -1,29 +1,27 @@
 {
-  "manifest_version": 3,
-  "name": "Selected Text Popup",
+  "manifest_version": 2,
+  "name": "Dictionary of abbreviations",
   "version": "1.0",
-  "description": "Displays selected text in a popup.",
-  "permissions": ["activeTab", "storage"],
-  "host_permissions": ["<all_urls>"],
-  "web_accessible_resources": [
-    {
-      "resources": ["words.txt"],
-      "matches": ["<all_urls>"]
-    }
-  ],
-  "action": {
-    "default_popup": "popup.html",
+  "description": "Shows meanings of selected abbreviation",
+  "permissions": ["activeTab", "contextMenus"],
+  
+  "browser_action": {
+    "default_popup": "popup/popup.html",
     "default_icon": {
-      "16": "icons/icon-16.png",
-      "48": "icons/icon-48.png",
-      "128": "icons/icon-128.png"
+      "48": "icon.png"
     }
   },
-  "content_scripts": [
-    {
-      "matches": ["<all_urls>"],
-      "js": ["content.js"]
-    }
-  ]
-}
+  
+  "background": {
+    "scripts": ["content-script.js"]
+  },
 
+  "web_accessible_resources": [
+  "abbreviations.json"
+],
+  
+  "content_scripts": [{
+    "matches": ["<all_urls>"],
+    "js": ["content-script.js"]
+  }]
+}

@@ -1,8 +1,0 @@
-
-CTC : Cost To Company
-LPA: Lakhs Per Annum
-TDS: Tax Deducted at Source
-HRA: House Rent Allowance
-DA: Dearness Allowance
-TA: Travel Allowance
-MA: Medical Allowance
